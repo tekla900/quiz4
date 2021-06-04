@@ -32,4 +32,4 @@ while payload['page'] <= 5:
         # print(title, author, ranking)
         file_obj.writerow([title, author, rating])
     payload['page'] += 1
-    sleep(randint(5, 10))
+    sleep(randint(15, 20))

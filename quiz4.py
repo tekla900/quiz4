@@ -28,8 +28,8 @@ while payload['page'] <= 5:
         title = each.span.text
         author = each.find('a', class_='authorName').text
         rating = each.find('span', class_='minirating').text
-        rating = rating.replace('—', 'from')
-        # print(title, author, ranking)
+        rating = (rating[0:5]).replace(' ', '')
+        # print(title, author, rating)
         file_obj.writerow([title, author, rating])
     payload['page'] += 1
     sleep(randint(15, 20))
